@@ -25,7 +25,6 @@ const AddRoom = () => {
     })
 
     const areDetailsFilled = () => {
-        console.log(details)
         return details.description.length > 0 &&
                details.name.length > 0 &&
                details.location.length > 0 &&
@@ -65,16 +64,13 @@ const AddRoom = () => {
     }
 
     const onClickHandle = (id) => {
-        // console.log(components)
         const componentsCopy = [...components];
         const idx = componentsCopy.findIndex(item => item.id === id)
         componentsCopy[idx] = {id : id, type: shift(componentsCopy[idx].type)};
-        console.log(componentsCopy);
         setComponents(componentsCopy);
     }
 
     const getRoomComponents = (size, components) => {
-        console.log('here')
         let contentW = []
         for (let i = 0; i < size.width; i++) {
             let contentL = []

@@ -17,7 +17,6 @@ const AdminRoomCard = ({ data }) => {
         window.location.reload();
     }
     const openRoom = (room) => {
-        console.log('CEVA')
         navigate(params.pathname+'/'+room.id)
     }
 
